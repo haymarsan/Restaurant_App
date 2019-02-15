@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#252331"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/collapsingToolbarHeight"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+
+            <ImageView
+                android:id="@+id/iv_bg_image_food_details"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/collapsingToolbarHeight"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/food_details" />
+
+            <android.support.v7.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/nested_scrollview_height"
+        app:layout_anchor="@id/appbar_layout"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_xlarge"
+                    app:cardBackgroundColor="#373447"
+                    app:cardCornerRadius="@dimen/margin_small"
+                    app:cardElevation="@dimen/margin_medium">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <TextView
+                            android:id="@+id/tv_food_details_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_medium_2"
+                            android:layout_marginTop="@dimen/margin_medium_2"
+                            android:text="@string/food_details_title"
+                            android:textColor="#FFFFFF"
+                            android:textSize="@dimen/text_heading_2x" />
+
+                        <ImageView
+                            android:id="@+id/iv_details_location"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="@dimen/margin_xlarge"
+                            android:layout_marginTop="@dimen/margin_medium_2"
+                            android:layout_toRightOf="@id/tv_food_details_title"
+                            android:src="@drawable/send" />
+
+                        <TextView
+                            android:id="@+id/tv_restaurant_food_details"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/iv_details_location"
+                            android:layout_marginTop="@dimen/margin_xxlarge"
+                            android:lineSpacingExtra="@dimen/margin_small"
+                            android:padding="@dimen/margin_medium_2"
+                            android:text="@string/restaurant_food_details"
+                            android:textColor="@color/light_grey" />
+
+                        <RelativeLayout
+                            android:id="@+id/rl_details"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_restaurant_food_details">
+
+                            <ImageView
+                                android:id="@+id/iv_open_close_time"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="@dimen/margin_medium_2"
+                                android:background="@drawable/circle_frame"
+                                android:src="@drawable/ic_access_time_black_24dp" />
+
+                            <TextView
+                                android:id="@+id/tv_open_close_time"
+                                android:layout_width="50dp"
+                                android:layout_height="30dp"
+                                android:layout_below="@id/iv_open_close_time"
+                                android:layout_marginLeft="@dimen/margin_medium_2"
+                                android:text="@string/open_close_time"
+                                android:textColor="@color/light_grey"
+                                android:textSize="@dimen/text_small"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/iv_location_details"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="@dimen/margin_xlarge"
+                                android:layout_toRightOf="@id/iv_open_close_time"
+                                android:background="@drawable/circle_frame"
+                                android:src="@drawable/ic_my_location_black_24dp" />
+
+                            <TextView
+                                android:id="@+id/tv_location_details"
+                                android:layout_width="50dp"
+                                android:layout_height="30dp"
+                                android:layout_below="@id/iv_open_close_time"
+                                android:layout_marginLeft="@dimen/margin_xlarge"
+                                android:layout_toRightOf="@id/tv_open_close_time"
+                                android:text="1.5km"
+                                android:textColor="@color/light_grey"
+                                android:textSize="@dimen/text_small"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/iv_map_details"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="28dp"
+                                android:layout_toRightOf="@id/iv_location_details"
+                                android:background="@drawable/circle_frame"
+                                android:src="@drawable/ic_map_black_24dp" />
+
+                            <TextView
+                                android:id="@+id/tv_map_details"
+                                android:layout_width="50dp"
+                                android:layout_height="30dp"
+                                android:layout_below="@id/iv_open_close_time"
+                                android:layout_marginLeft="@dimen/margin_xlarge"
+                                android:layout_toRightOf="@id/tv_location_details"
+                                android:text="Map View"
+                                android:textColor="@color/light_grey"
+                                android:textSize="@dimen/text_small"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/iv_delivery_details"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="@dimen/margin_xlarge"
+                                android:layout_toRightOf="@id/iv_map_details"
+                                android:background="@drawable/circle_frame"
+                                android:src="@drawable/ic_home_black_24dp" />
+
+                            <TextView
+                                android:id="@+id/tv_delivery_details"
+                                android:layout_width="50dp"
+                                android:layout_height="30dp"
+                                android:layout_below="@id/iv_open_close_time"
+                                android:layout_marginLeft="@dimen/margin_xlarge"
+                                android:layout_toRightOf="@id/tv_map_details"
+                                android:text="Delivery"
+                                android:textColor="@color/light_grey"
+                                android:textSize="@dimen/text_small"
+                                android:textStyle="bold" />
+
+
+                        </RelativeLayout>
+
+                        <android.support.design.widget.TabLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/rl_details"
+                            android:layout_marginTop="@dimen/margin_medium"
+                            android:layout_marginBottom="@dimen/margin_medium_2"
+                            app:tabIndicatorColor="@color/white"
+                            app:tabTextColor="@color/white">
+
+                            <android.support.design.widget.TabItem
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Details" />
+
+                            <android.support.design.widget.TabItem
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Menu" />
+
+                            <android.support.design.widget.TabItem
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Review" />
+                        </android.support.design.widget.TabLayout>
+
+                    </RelativeLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+
+            </RelativeLayout>
+
+        </FrameLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>

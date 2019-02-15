@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Restaurant App</string>
+    <string name="action_settings">Settings</string>
+
+
+    <string name="restaurant_description">Chop roma tomatoes and \nplace in a bowl adding herbs, garlic, balsamic \nvinegar, basil, and olive oil. </string>
+    <string name="food_details_title">Chicken, Spicy,\nand Vegetables</string>
+    <string name="restaurant_food_details">Chop roma tomatoes and place in a bowl adding herbs, garlic, balsamic vinegar, basil, and olive oil.
+        Mix making sure to coat ingredients evenly then set aside.
+    Slice 2 inch long pockets into chicken breasts and brush with olive oil.
+        Spoon the bruschetta mixture in to the chicken and place in a baking sheet.  Bake for 40 minutes until chicken is cooked through.
+    Add some mozzerella cheese to the chicken when it has around 10 minutes left for a cheesy delight!
+        Spoon the bruschetta mixture in to the chicken and place in a baking sheet.  Bake for 40 minutes until chicken is cooked through.
+    Add some mozzerella cheese to the chicken when it has around 10 minutes left for a cheesy delight!
+
+
+    </string>
+
+    <string name="open_close_time">10am\n5pm</string>
+</resources>
